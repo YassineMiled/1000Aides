@@ -1,11 +1,11 @@
 <?php
-include_once("modele/bd.inc.php");
+include_once("bd.inc.php");
     function getNumPoliceByIdR($id) {
         $resultat = array();
     
         try {
             $cnx = connexionPDO();
-            $req = $cnx->prepare("select * from  serviceUrgence where id=:id");
+            $req = $cnx->prepare("select numero from serviceUrgence where idPays = 1");
             $req->bindValue(':id', $id, PDO::PARAM_INT);
             
             $req->execute();
