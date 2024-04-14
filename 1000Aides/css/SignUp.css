@@ -1,0 +1,108 @@
+body{
+    background-image: url(../images/loginFond.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover  ;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.wrapper {
+    width: 420px;   
+    background: #496e7480;
+    color: white;
+    border-radius: 20px;
+    padding: 40px 40px;
+
+    /* Position absolue pour centrer */
+    position: absolute;
+    top:34%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+h1{
+    color: #000000;
+}
+label{
+    color: #000000;
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+    text-align: left; 
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}   
+
+select[name="sexe"]{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+nav {
+    background-color: #0b0d19;
+    padding: 10px 0;
+    text-align: center;
+    padding: 10px 10px;
+}
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0 10px;
+}
+
+
+.password-container {
+    position: relative;
+}
+/*position de l'oeil */
+.toggle-password {
+    position: absolute;
+    right: 110px;
+    top:68%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#password {
+    padding-right: 30px; /* Pour laisser de la place à l'icône */
+}
