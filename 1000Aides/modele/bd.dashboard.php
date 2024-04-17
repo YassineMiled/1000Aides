@@ -40,7 +40,7 @@ if(isset($_SESSION['idUser'])) {
     <?php
 } else {
     // Rediriger vers la page de connexion si l'idUser n'est pas défini dans la session
-    header("Location: ../vue/dashboard.php");
+    header("Location: ../vue/VueDashboard.php");
     exit; // Assurez-vous d'arrêter l'exécution du script après la redirection
 }
 ?>
