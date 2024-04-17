@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
-    <link rel="stylesheet" href="../css/SignUp.css">
+    <link rel="stylesheet" href="css/SignUp.css">
 </head>
 <body>
     <nav>
@@ -17,7 +17,7 @@
         <div class="wrapper">
             <h1>Inscription</h1>
             <st rong>
-            <form id="loginForm" action="../modele/SignUp.inc.php" method="POST" onsubmit="submitForm(event)">
+            <form id="loginForm" action="modele/SignUp.inc.php" method="POST" onsubmit="submitForm(event)">
                 <label for="nom">Nom :</label>
                 <input type="text" id="nom" name="nom" required>
         

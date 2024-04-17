@@ -2,7 +2,7 @@
 
 function controleurPrincipal($action){
     $lesActions = array();
-    $lesActions["defaut"] = "index.php";
+    $lesActions["defaut"] = "accueil.php";
     $lesActions["propos"] = "propos.php";
     $lesActions["signUp"] = "signUp.php";
     $lesActions["login"] = "login.php";
@@ -15,12 +15,7 @@ function controleurPrincipal($action){
     else{
         return $lesActions["defaut"];
     }
-    print($lesActions);
 }
-$action = $_GET['action'] ?? 'defaut';  // Utiliser 'defaut' si aucune action n'est spécifiée
-$fichier = controleurPrincipal($action);
-include($fichier);
-print($action);
-print($fichier);
+
 
 ?>

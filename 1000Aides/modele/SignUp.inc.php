@@ -1,5 +1,5 @@
 <?php
-include_once '../modele/bd.inc.php';
+include_once "bd.inc.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nom = $_POST['nom'];
@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt = $pdo->prepare("INSERT INTO utilisateurs (nom, prenom, email, motDePasse, sexe) VALUES (?, ?, ?, ?, ?)");
     $stmt->execute([$nom, $prenom, $email, $hashed_password, $sexe]);
 
-    header("Location: ../vue/index.php");
+    header("Location: ../");
     exit();
 }
 ?>

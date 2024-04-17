@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="css/login.css">
     <?php
-    include_once('../modele/login.inc.php');
+    include_once "modele/login.inc.php";
     ?>
 </head>
 <body>

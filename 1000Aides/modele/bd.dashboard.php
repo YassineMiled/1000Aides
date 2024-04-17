@@ -1,5 +1,5 @@
 <?php
-include_once('../modele/bd.inc.php');
+include_once "bd.inc.php";
 
 // Assurez-vous que la session a été démarrée
 session_start();

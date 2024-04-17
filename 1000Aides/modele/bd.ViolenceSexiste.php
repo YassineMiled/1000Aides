@@ -1,6 +1,6 @@
 <?php
 
-include_once('../modele/bd.inc.php');
+include_once "bd.inc.php";
 
 function fetchViolencesSexistes($idPays) {
     global $conn;  // Ensure $conn is accessible within the function if it's defined outside

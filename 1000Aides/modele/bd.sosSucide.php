@@ -1,6 +1,6 @@
 <?php
 
-include_once('../modele/bd.inc.php');
+include_once "bd.inc.php";
 
 function fetchSosSucide($idPays) {
     global $conn;

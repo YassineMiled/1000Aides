@@ -3,5 +3,5 @@
 if ( $_SERVER["SCRIPT_FILENAME"] == __FILE__ ){
     $racine="..";
 }
-include_once('../vue/VuementionLegal.php');
+include "$racine/vue/VuementionLegal.php";
 ?>
