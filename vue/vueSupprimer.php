@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connexion</title>
-    <link rel="stylesheet" href="css/login.css">
+    <title>Supprimer Mon Profil</title>
+    <link rel="stylesheet" href="css/supprimer.css">
    
 </head>
 <body>
@@ -25,9 +25,11 @@
   
  
         <div class="wrapper">
-            <h1>Connexion</h1>
+            <h1>Supprimer Mon Profil</h1>
+            <h2>ATTENTION CETTE ACTION EST IRREVERSIBLE</h3>
+            <H3>Veuillez taper votre adresse email ainsi que votre mot de passe pour confirmer la suppression du compte</H3>
             <strong>
-            <form action="./?action=login" method="POST">
+            <form action="./?action=supprimerProfil" method="POST">
                 <label for="email">Adresse e-mail :</label>
                 <input type="email" id="email" name="email" required>
 
@@ -51,3 +53,5 @@
         </div>
 </body>
 </html>
+
+

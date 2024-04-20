@@ -12,10 +12,17 @@
 <body>
 
 <nav>
+        <strong>
         <a href="./?action=defaut">Accueil</a>
         <a href="./?action=propos">À propos</a>
-        <a href="./?action=signUp">Inscription</a> 
-        <a href="./?action=login">Connexion</a>
+             <?php if(isLoggedOn()){ ?>
+                <a href="./?action=dashboard">Mon Profil</a>
+                <?php } 
+                else{ ?>
+                <a href="./?action=signUp">Inscription</a>
+                <a href="./?action=login">Connexion</a>
+                <?php } ?>
+        </strong>
     </nav>
     <br>
   <div class="container">

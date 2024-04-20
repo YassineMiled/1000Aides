@@ -9,7 +9,7 @@ body{
 
 .wrapper {
     width: 420px;   
-    background: #496e7480;
+    background: #496e74f6;
     color: white;
     border-radius: 20px;
     padding: 40px 40px;
@@ -21,10 +21,10 @@ body{
     transform: translate(-50%, -50%);
 }
 h1{
-    color: #000000;
+    color: #ffffff;
 }
 label{
-    color: #000000;
+    color: #ffffff;
 }
 
 form {
@@ -79,14 +79,14 @@ input[type="submit"]:hover {
 }
 
 nav {
-    background-color: #263d4a;
+    background-color: #273e4b42;
     padding: 10px 0;
     text-align: center;
     padding: 10px 10px;
 }
 nav a {
     text-decoration: none;
-    color: #ffffff;
+    color:rgb(255, 255, 255);
     margin: 0 10px;
 }
 

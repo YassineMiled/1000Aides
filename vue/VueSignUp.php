@@ -2,22 +2,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription</title>
     <link rel="stylesheet" href="css/SignUp.css">
 </head>
 <body>
-    <nav>
-    <a href="./?action=defaut">Accueil</a>
+    
+<nav>
+        <strong>
+        <a href="./?action=defaut">Accueil</a>
         <a href="./?action=propos">À propos</a>
-        <a href="./?action=signUp">Inscription</a> 
-        <a href="./?action=login">Connexion</a>
+             <?php if(isLoggedOn()){ ?>
+                <a href="./?action=dashboard">Mon Profil</a>
+                <?php } 
+                else{ ?>
+                <a href="./?action=signUp">Inscription</a>
+                <a href="./?action=login">Connexion</a>
+                <?php } ?>
+        </strong>
     </nav>
   
  
         <div class="wrapper">
             <h1>Inscription</h1>
-            <st rong>
-            <form id="loginForm" action="modele/SignUp.inc.php" method="POST" onsubmit="submitForm(event)">
+            <strong>
+            <form id="loginForm" action="./?action=signUp" method="POST" onsubmit="submitForm(event)">
                 <label for="nom">Nom :</label>
                 <input type="text" id="nom" name="nom" required>
         

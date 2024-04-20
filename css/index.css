@@ -54,4 +54,14 @@ section {
     margin-right: 5px; /* Ajouter une marge à droite pour espacer les drapeaux du texte */
 }
 
-
+#Langues {
+    width: 20%;      /* Ajustez la largeur selon les besoins ou utilisez une valeur spécifique comme 300px */
+    height: 50px;     /* Hauteur du select */
+    font-size: 16px;  /* Taille du texte dans le select */
+    padding: 5px;     /* Ajoutez du padding pour plus de confort visuel */
+    cursor: pointer;  /* Cursor en forme de pointeur pour indiquer qu'il s'agit d'un élément interactif */
+  }
+  
+  h3{
+    color: red;
+  }

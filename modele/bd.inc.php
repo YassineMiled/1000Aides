@@ -1,23 +1,19 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "secours";
 
-// Création de la connexion
-$conn = new mysqli($servername, $username, $password, $dbname);
-$pdo = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $username, $password);
+function connexionPDO() {
+    $login = "root";
+    $mdp = "";
+    $bd = "secours";
+    $serveur = "localhost";
 
-// Vérification de la connexion
-if ($conn->connect_error) {
-    die("La connexion a échoué : " . $conn->connect_error);
+    try {
+        $conn = new PDO("mysql:host=$serveur;dbname=$bd", $login, $mdp, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\'')); 
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        return $conn;
+    } catch (PDOException $e) {
+        print "Erreur de connexion PDO ";
+        die();
+    }
 }
 
-try {
-    
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Erreur de connexion à la base de données: " . $e->getMessage());
-}
 ?>
-

@@ -13,7 +13,7 @@ include_once "$racine/modele/bd.Pompiers.php";
 include_once "$racine/modele/bd.Samu.php";
 include_once "$racine/modele/bd.sosSucide.php";
 include_once "$racine/modele/bd.ViolenceSexiste.php";
-
+include_once "$racine/modele/login.inc.php";
 //vue
 $titre = "Accueil - 1000Aides";
 include "$racine/vue/Vueindex.php";

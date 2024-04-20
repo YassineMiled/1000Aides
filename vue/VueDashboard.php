@@ -8,20 +8,34 @@
     </head>
 <header>
         <h1>1000Aides</h1>
-        <p>Simplifiez-vous la vie avec 1000Aides </p> 
+        <h3>Simplifiez-vous la vie avec 1000Aides </h3> 
         <nav>
             <strong>
             <a href="./?action=defaut">Accueil</a>
-        <a href="./?action=propos">À propos</a>
-        <a href="./?action=signUp">Inscription</a> 
-        <a href="./?action=login">Connexion</a>
+            <a href="./?action=propos">À propos</a>
             </strong>
     </nav>
 </header>
 <body>
+
 <div class="wrapper">
 <h1>Mon Profil</h1>
-<?php include_once "modele/bd.dashboard.php"  ?>
+<strong>
+ adresse électronique : <br><?= $util["email"] ?><br><br>
+Mon nom: <br><?= $util["nom"] ?> <br><br>
+Mon prenom : <br><?= $util["prenom"] ?><br><br>
+Mot de Passe : <br><?= $util["motDePasse"] ?> <br><br>
+Sexe :<br> <?= $util["sexe"] ?><br><br>
+</strong>
+
+<strong>
+<BR>
+<a href="./?action=updProfil">Modifier Profil</a>   
+<BR><BR>
+<a href="./?action=supprimerProfil">supprimer profil</a>
+<BR><BR>
+<a href="./?action=deconnexion">se deconnecter</a>
+</strong>
 </div>
 </body>
 </html>

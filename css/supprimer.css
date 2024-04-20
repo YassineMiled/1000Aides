@@ -1,6 +1,6 @@
 
 body{
-    background-image: url(../images/login.png);
+    background-image: url(../images/delete.png);
     background-repeat: no-repeat;
     background-size: cover  ;
     font-family: Arial, sans-serif;
@@ -8,7 +8,7 @@ body{
 }
 
 nav {
-    background-color: #93d7d783;
+    background-color: #90d0ed;
     padding: 10px 0;
     text-align: center;
     padding: 10px 10px;
@@ -20,7 +20,7 @@ nav a {
 }
 .wrapper {
     width: 420px;   
-    background: #75bbc1f8;
+    background: #90cfedda;
     color: rgb(255, 255, 255);
     border-radius: 20px;
     padding: 40px 40px;
@@ -52,7 +52,9 @@ input[type="text"], input[type="password"] {
     box-sizing: border-box;
 }
 
-
+label[for="email"] , label[for="motDePasse"]{
+color: black;
+}
 
 .password-container {
     position: relative;
@@ -61,7 +63,7 @@ input[type="text"], input[type="password"] {
 .toggle-password {
     position: absolute;
     right: 60px;
-    top:71%;
+    top:81%;
     transform: translateY(-50%);
     cursor: pointer;
 }
@@ -70,3 +72,9 @@ input[type="text"], input[type="password"] {
     padding-right: 30px; /* Pour laisser de la place à l'icône */
 }
 
+h1,h3{
+    color: black;
+}
+h2{
+    color: red;
+}

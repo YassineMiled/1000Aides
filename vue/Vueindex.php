@@ -18,17 +18,22 @@
         <h1>1000Aides</h1>
         <p>Simplifiez-vous la vie avec 1000Aides </p> 
         <form method="post" action="">
-        <select name="Langues" id = "Langues">  
+            <select name="Langues" id = "Langues" onchange="this.form.submit();"> 
+            <option value="0" data-image="">Choisir Un Pays</option>
+            <option value="1" data-image="images/france.png">France</option>
             
-            <option value="1" data-image="images/france.png" selected>France</option>
+            <?php if(isLoggedOn()){ ?>
             <option value="2" data-image="images/usa.png">États-Unis</option>
             <option value="3" data-image="images/uk.png">Royaume-Uni</option>
             <option value="4" data-image="images/allemagne.png">Allemagne</option>
             <option value="5" data-image="images/japon.png">Japon</option>
             <option value="6" data-image="images/tunisie.png">Tunisie</option>
-            
+                <?php } 
+                else{ ?>
+                
+                <?php } ?>
         </select>
-        <input type="submit" value="Soumettre">
+
     </form>
     
 
@@ -39,16 +44,23 @@
         <strong>
         <a href="./?action=defaut">Accueil</a>
         <a href="./?action=propos">À propos</a>
-        <a href="./?action=signUp">Inscription</a> 
-        <a href="./?action=login">Connexion</a>
-        <br><br>
-        <a href="./?action=dashboard">Mon Profil</a>
+             <?php if(isLoggedOn()){ ?>
+                <a href="./?action=dashboard">Mon Profil</a>
+                <?php } 
+                else{ ?>
+                <a href="./?action=signUp">Inscription</a>
+                <a href="./?action=login">Connexion</a>
+                <?php } ?>
         </strong>
     </nav>
 
     <section>
         <h2>Nos Services Publics</h2>
-
+        <?php if(isLoggedOn()){ ?><h2></h2>
+                <?php } 
+                else{ ?>
+                <h3>Connectez-vous pour voir d'avantage de Service et dans différents Pays tel que l'Allemagne,<br> Japon, États-Unis et plein d'autres !  </h3>
+                <?php } ?>
         <div class="services">
             <div class="service">
                 <img src="images/policeFR.png" alt="Police">       

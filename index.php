@@ -1,7 +1,7 @@
 <?php
 include "getRacine.php";
 include "$racine/controleur/controleurPrincipal.php";
-
+include_once "$racine/modele/login.inc.php";
 
 
 

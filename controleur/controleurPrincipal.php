@@ -6,6 +6,9 @@ function controleurPrincipal($action){
     $lesActions["propos"] = "propos.php";
     $lesActions["signUp"] = "signUp.php";
     $lesActions["login"] = "login.php";
+    $lesActions["deconnexion"] = "deconnexion.php";
+    $lesActions["updProfil"] = "updProfil.php";
+    $lesActions["supprimerProfil"] = "supprimerProfil.php";
     $lesActions["dashboard"] = "dashboard.php";
     $lesActions["mentionLegal"] = "mentionlegal.php";
     
