@@ -2,13 +2,13 @@
 
 include_once "bd.inc.php";
 
-function fetchAlerteAttentat($idPays) {
+function fetchAlerteAttentat($idpays) {
     $resultat = array();
 
     try {
         $cnx = connexionPDO();
-        $req = $cnx->prepare("SELECT * FROM serviceurgence WHERE idPays = :idPays AND nomService = 'Alerte attentat'");
-        $req->bindValue(':idPays', $idPays, PDO::PARAM_INT);
+        $req = $cnx->prepare("SELECT * FROM serviceUrgence WHERE idpays = :idpays AND nomService = 'Alerte attentat'");
+        $req->bindValue(':idpays', $idpays, PDO::PARAM_INT);
         $req->execute();
       
 

@@ -1,4 +1,4 @@
-CREATE TABLE Utilisateurs (
+CREATE TABLE utilisateurs (
    idUser INT AUTO_INCREMENT PRIMARY KEY,
    nom VARCHAR(50),
    prenom VARCHAR(50),
@@ -8,27 +8,27 @@ CREATE TABLE Utilisateurs (
 );
 
 
-CREATE TABLE Pays(
-   idPays INT,
-   nomPays VARCHAR(50),
-   PRIMARY KEY(idPays)
+CREATE TABLE pays(
+   idpays INT,
+   nompays VARCHAR(50),
+   PRIMARY KEY(idpays)
 );
 
-CREATE TABLE ServiceUrgence(
+CREATE TABLE serviceUrgence(
    idUrgence INT,
    nomService VARCHAR(50),
    numero VARCHAR(50),
    description VARCHAR(500),
-   idPays INT NOT NULL,
+   idpays INT NOT NULL,
    PRIMARY KEY(idUrgence),
-   FOREIGN KEY(idPays) REFERENCES Pays(idPays)
+   FOREIGN KEY(idpays) REFERENCES pays(idpays)
 );
 
 CREATE TABLE Photo(
    idPhoto INT,
    idUrgence INT NOT NULL,
    PRIMARY KEY(idPhoto),
-   FOREIGN KEY(idUrgence) REFERENCES ServiceUrgence(idUrgence)
+   FOREIGN KEY(idUrgence) REFERENCES serviceUrgence(idUrgence)
 );
 
 CREATE TABLE utiliser(
@@ -36,14 +36,14 @@ CREATE TABLE utiliser(
    idUrgence INT,
    favorie VARCHAR(50),
    PRIMARY KEY(idUser, idUrgence),
-   FOREIGN KEY(idUser) REFERENCES Utilisateurs(idUser),
-   FOREIGN KEY(idUrgence) REFERENCES ServiceUrgence(idUrgence)
+   FOREIGN KEY(idUser) REFERENCES utilisateurs(idUser),
+   FOREIGN KEY(idUrgence) REFERENCES serviceUrgence(idUrgence)
 );
 
 
 
 
-INSERT INTO Pays (idPays, nomPays) VALUES
+INSERT INTO pays (idpays, nompays) VALUES
 (1, 'France'),
 (2, 'États-Unis'),
 (3, 'Royaume-Uni'),
@@ -51,7 +51,7 @@ INSERT INTO Pays (idPays, nomPays) VALUES
 (5, 'Japon');
 
 
-INSERT INTO serviceUrgence (idUrgence, nomService, numero, description, idPays) VALUES
+INSERT INTO serviceUrgence (idUrgence, nomService, numero, description, idpays) VALUES
 (1, 'Police', 17,'Contacter la police en cas d urgence ou pour signaler un crime.' , 1),
 (2, 'Police', 911,'Contacter la police en cas d urgence ou pour signaler un crime.' , 2),    
 (3, 'Police', 911,'Contacter la police en cas d urgence ou pour signaler un crime.' , 3),  
@@ -59,7 +59,7 @@ INSERT INTO serviceUrgence (idUrgence, nomService, numero, description, idPays) 
 (5, 'Police', 110, 'Contacter la police en cas d urgence ou pour signaler un crime.',5);     
 
 
-INSERT INTO serviceUrgence (idUrgence, nomService, numero, description, idPays) VALUES
+INSERT INTO serviceUrgence (idUrgence, nomService, numero, description, idpays) VALUES
 (6, 'Pompiers', 18,  "En cas d'incendie ou d'accident, contactez les pompiers.", 1), 
 (7, 'Pompiers', 911, "En cas d'incendie ou d'accident, contactez les pompiers.",2), 
 (8, 'Pompiers', 999,"En cas d'incendie ou d'accident, contactez les pompiers.",3), 
@@ -68,7 +68,7 @@ INSERT INTO serviceUrgence (idUrgence, nomService, numero, description, idPays) 
 
 
 
-INSERT INTO serviceUrgence (idUrgence, nomService, numero, description, idPays) VALUES
+INSERT INTO serviceUrgence (idUrgence, nomService, numero, description, idpays) VALUES
 (11, 'SAMU', 15, "En cas d'urgence médicale, contactez le SAMU.", 1),
 (12, 'SAMU', 911, "En cas d'urgence médicale, contactez le SAMU.", 2),
 (13, 'SAMU', 999, "En cas d'urgence médicale, contactez le SAMU.", 3),
@@ -76,7 +76,7 @@ INSERT INTO serviceUrgence (idUrgence, nomService, numero, description, idPays) 
 (15, 'SAMU', 119, "En cas d'urgence médicale, contactez le SAMU.", 5);
 
 
-INSERT INTO serviceUrgence (idUrgence, nomService, numero, description, idPays) VALUES
+INSERT INTO serviceUrgence (idUrgence, nomService, numero, description, idpays) VALUES
 (16, 'Alerte attentat', 197, "En cas d'alerte attentat ou d'enlèvement, signalez-le aux autorités compétentes.", 1),
 (17, 'Alerte attentat', 911, "En cas d'alerte attentat ou d'enlèvement, signalez-le aux autorités compétentes.", 2),
 (18, 'Alerte attentat', 999, "En cas d'alerte attentat ou d'enlèvement, signalez-le aux autorités compétentes.", 3),
@@ -84,7 +84,7 @@ INSERT INTO serviceUrgence (idUrgence, nomService, numero, description, idPays) 
 (20, 'Alerte attentat', 911, "En cas d'alerte attentat ou d'enlèvement, signalez-le aux autorités compétentes.", 5);
 
 
-INSERT INTO serviceUrgence (idUrgence, nomService, numero, description, idPays) VALUES
+INSERT INTO serviceUrgence (idUrgence, nomService, numero, description, idpays) VALUES
 (21, 'Enfants en danger', 119, "Pour signaler des enfants en danger, contactez les services sociaux ou la ligne d'urgence dédiée.", 1),
 (22, 'Enfants en danger', 911, "Pour signaler des enfants en danger, contactez les services sociaux ou la ligne d'urgence dédiée.", 2),
 (23, 'Enfants en danger', 112, "Pour signaler des enfants en danger, contactez les services sociaux ou la ligne d'urgence dédiée.", 3),
@@ -93,7 +93,7 @@ INSERT INTO serviceUrgence (idUrgence, nomService, numero, description, idPays) 
 
 
 
-INSERT INTO serviceUrgence (idUrgence, nomService, numero, description, idPays) VALUES
+INSERT INTO serviceUrgence (idUrgence, nomService, numero, description, idpays) VALUES
 (26, 'Violences sexistes et sexuelles', "3919", "En cas de violences sexistes et sexuelles, contactez les autorités locales ou des associations spécialisées pour obtenir de l'aide et du soutien.", 1),
 (27, 'Violences sexistes et sexuelles', "4673", "En cas de violences sexistes et sexuelles, contactez les autorités locales ou des associations spécialisées pour obtenir de l'aide et du soutien.", 2),
 (28, 'Violences sexistes et sexuelles', "0808 2000 247", "En cas de violences sexistes et sexuelles, contactez les autorités locales ou des associations spécialisées pour obtenir de l'aide et du soutien.", 3),
@@ -101,29 +101,16 @@ INSERT INTO serviceUrgence (idUrgence, nomService, numero, description, idPays) 
 (30, 'Violences sexistes et sexuelles', "0570 0 81093", "En cas de violences sexistes et sexuelles, contactez les autorités locales ou des associations spécialisées pour obtenir de l'aide et du soutien.", 5);   
 
 
-INSERT INTO serviceUrgence (idUrgence, nomService, numero, description, idPays) VALUES
+INSERT INTO serviceUrgence (idUrgence, nomService, numero, description, idpays) VALUES
 (31,'SOS Suicide', 014539, "En cas de détresse émotionnelle, n'hésitez pas à appeler SOS Suicide pour recevoir du soutien et de l'écoute.", 1),
 (32,'SOS Suicide', 18002, "En cas de détresse émotionnelle, n'hésitez pas à appeler SOS Suicide pour recevoir du soutien et de l'écoute.",2),
 (33,'SOS Suicide', 1161, "En cas de détresse émotionnelle, n'hésitez pas à appeler SOS Suicide pour recevoir du soutien et de l'écoute.",3),
 (34,'SOS Suicide', 080011,  "En cas de détresse émotionnelle, n'hésitez pas à appeler SOS Suicide pour recevoir du soutien et de l'écoute.",4),
 (35,'SOS Suicide', 035774, "En cas de détresse émotionnelle, n'hésitez pas à appeler SOS Suicide pour recevoir du soutien et de l'écoute.",5);
 
-INSERT INTO serviceUrgence (idUrgence, nomService, numero, description, idPays) VALUES
+INSERT INTO serviceUrgence (idUrgence, nomService, numero, description, idpays) VALUES
 (36,'Centre Anti-Poison', "01 40 05 48 48", "En cas d'ingestion accidentelle ou d'exposition à des substances toxiques, contactez immédiatement le Centre Anti-Poison pour des conseils médicaux d'urgence.",1),
 (37,'Centre Anti-Poison', "1 800 222 1222", "En cas d'ingestion accidentelle ou d'exposition à des substances toxiques, contactez immédiatement le Centre Anti-Poison pour des conseils médicaux d'urgence.",2),
 (38,'Centre Anti-Poison', "111", "En cas d'ingestion accidentelle ou d'exposition à des substances toxiques, contactez immédiatement le Centre Anti-Poison pour des conseils médicaux d'urgence.",3),
 (39,'Centre Anti-Poison', "030 19240", "En cas d'ingestion accidentelle ou d'exposition à des substances toxiques, contactez immédiatement le Centre Anti-Poison pour des conseils médicaux d'urgence.",4),
 (40,'Centre Anti-Poison', "03 3541 8211", "En cas d'ingestion accidentelle ou d'exposition à des substances toxiques, contactez immédiatement le Centre Anti-Poison pour des conseils médicaux d'urgence.",5);
-
-
-
-INSERT INTO utilisateurs (idUser, nom,prenom, age,sexe) VALUES
-(1,'Miled','Yassine',20,'Masculin');
-
-
-select * from serviceUrgence Where idPays = 1;
-
-
-select numero from serviceUrgence where idPays = 1 and nomService = 'Police';
-
-delete from utilisateurs where idUser=nombre;

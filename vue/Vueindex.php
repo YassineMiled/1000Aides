@@ -19,7 +19,7 @@
         <p>Simplifiez-vous la vie avec 1000Aides </p> 
         <form method="post" action="">
             <select name="Langues" id = "Langues" onchange="this.form.submit();"> 
-            <option value="0" data-image="">Choisir Un Pays</option>
+            <option value="0" data-image="">Choisir Un pays</option>
             <option value="1" data-image="images/france.png">France</option>
             
             <?php if(isLoggedOn()){ ?>
@@ -60,7 +60,7 @@
         <?php if(isLoggedOn()){ ?><h2></h2>
                 <?php } 
                 else{ ?>
-                <h3>Connectez-vous pour voir d'avantage de Service et dans différents Pays tel que l'Allemagne,<br> Japon, États-Unis et plein d'autres !  </h3>
+                <h3>Connectez-vous pour voir d'avantage de Service et dans différents pays tel que l'Allemagne,<br> Japon, États-Unis et plein d'autres !  </h3>
                 <?php } ?>
         <div class="services">
             <div class="service">

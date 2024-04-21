@@ -2,7 +2,7 @@
 
 include_once "bd.inc.php";
 
-function getUtilisateurs() {
+function getutilisateurs() {
     $resultat = array();
 
     try {
@@ -167,8 +167,8 @@ if ($_SERVER["SCRIPT_FILENAME"] == __FILE__) {
     // prog principal de test
     header('Content-Type:text/plain');
 
-    echo "getUtilisateurs() : \n";
-    print_r(getUtilisateurs());
+    echo "getutilisateurs() : \n";
+    print_r(getutilisateurs());
 
     echo "getUtilisateurByemail(\"mathieu.capliez@gmail.com\") : \n";
     print_r(getUtilisateurByemail("mathieu.capliez@gmail.com"));
