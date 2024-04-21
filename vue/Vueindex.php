@@ -44,6 +44,7 @@
         <strong>
         <a href="./?action=defaut">Accueil</a>
         <a href="./?action=propos">À propos</a>
+   
              <?php if(isLoggedOn()){ ?>
                 <a href="./?action=dashboard">Mon Profil</a>
                 <?php } 

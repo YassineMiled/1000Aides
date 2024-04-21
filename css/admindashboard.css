@@ -1,19 +1,18 @@
 header {
-    background-color: #496e74ce;
-    width: auto;
+    background-color: #021326;
     color:black;
-    padding: 10px ;
+    padding: 0px;
     text-align: center;
 }
 
 body{
-    background-image: url('../images/dashboard.png');
+    background-image: url('../images/adminDashboard.png');
     background-repeat: no-repeat;   
     background-size: cover;
 }
 
 h1{
-    color: black;
+    color: rgb(255, 0, 0);
     text-align: center;
 }
 
@@ -32,7 +31,7 @@ h4{
 
 .wrapper {
     width: 420px;   
-    background: #496e74ec;
+    background: #208ab1f1;
     color: rgb(0, 0, 0);
     border-radius: 20px;
     padding: 40px 40px;
@@ -45,14 +44,19 @@ h4{
 }
 
 nav {
+
     padding: 0px 0;
     text-align: center;
 }
 nav a {
     text-decoration: none;
-    color: #000000;
+    color: #ff0000;
     margin: 0 10px;
 }
 a{
     color: black;
+}
+
+.modif{
+    color: aqua;
 }

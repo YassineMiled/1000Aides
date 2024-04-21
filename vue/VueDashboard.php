@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="css/dashboard.css">
     </head>
 <header>
-        <h1>1000Aides</h1>
-        <h3>Simplifiez-vous la vie avec 1000Aides </h3> 
         <nav>
             <strong>
             <a href="./?action=defaut">Accueil</a>

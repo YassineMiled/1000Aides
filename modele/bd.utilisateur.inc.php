@@ -84,6 +84,33 @@ function DeleteUtilisateur($email,$motDePasse) {
     }
 }
 
+function DeleteUtilisateurByAdmin($email) {
+    try {
+        // Establish connection
+        $cnx = connexionPDO();
+        // Prepare a DELETE SQL statement
+        $req = $cnx->prepare("DELETE FROM utilisateurs WHERE email = :email");
+        $req->bindValue(':email', $email, PDO::PARAM_STR);
+        
+        // Execute the query and store the result
+        $resultat = $req->execute();
+        
+        // Optional: Check if the deletion was successful
+        if ($resultat) {
+            echo "l'utilisateur a été supprimé avec succès.";
+        } else {
+            echo "Le compte n'as pas été supprimé .";
+        }
+
+        return $resultat;
+
+    } catch (PDOException $e) {
+        // Handle potential errors in a catch block
+        print "Erreur !: " . $e->getMessage();
+        die();
+    }
+}
+
 function updtmotDePassetilisateur($email, $motDePasse) {
     $resultat = -1;
     try {

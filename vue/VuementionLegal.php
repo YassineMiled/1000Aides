@@ -38,7 +38,7 @@
 
     <h2>Hébergeur du site</h2>
     <p>Nom de l'hébergeur : GITHUB</p>
-    <p>Adresse de l'hébergeur : [Adresse de l'hébergeur]</p>
+    <p>Adresse de l'hébergeur : AWS</p>
     <p>Contact de l'hébergeur : yassinemiled34190@gmail.com</p>
 
     <h2>Propriété intellectuelle</h2>
@@ -49,6 +49,7 @@
     <p>1000Aides ne peut être tenu responsable des erreurs présentes sur le site, ainsi que de l'usage qui pourrait être fait des informations qui y sont contenues.</p>
 
     <h2>Liens externes</h2>
+    <P>Toutes nos images proviennent d'une intelligence artificielle, ou sont libres de droits </P>
     <p>Le site 1000Aides peut contenir des liens hypertextes vers d'autres sites. La responsabilité de 1000Aides ne saurait être engagée quant aux contenus de ces sites tiers.</p>
 
     <h2>Loi applicable</h2>
