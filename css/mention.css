@@ -1,0 +1,54 @@
+
+body {
+    background-image: url('../images//mentionlegal.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0px;
+    padding: 20px;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.596);
+    max-width: 800px;
+    margin: 0 auto; 
+    border: 3px solid #256a8e;
+    border-radius: 10px;
+    padding: 3%;
+
+}
+nav {
+  background-color: rgba(255, 255, 255, 0.842);
+  padding: 10px 0;
+  text-align: center;
+  border: 3px solid #256a8e;
+}
+nav a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 10px;
+  
+}
+
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+ul {
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
