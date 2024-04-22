@@ -1,0 +1,80 @@
+
+body{
+    background-image: url(../images/delete.png);
+    background-repeat: no-repeat;
+    background-size: cover  ;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+nav {
+    background-color: #90d0ed;
+    padding: 10px 0;
+    text-align: center;
+    padding: 10px 10px;
+}
+nav a {
+    text-decoration: none;
+    color: #000000;
+    margin: 0 10px;
+}
+.wrapper {
+    width: 420px;   
+    background: #90cfedda;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 40px 40px;
+
+    /* Position absolue pour centrer */
+    position: absolute;
+    top:34%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}   
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+label[for="email"] , label[for="motDePasse"]{
+color: black;
+}
+
+.password-container {
+    position: relative;
+}
+/*position de l'oeil */
+.toggle-password {
+    position: absolute;
+    right: 60px;
+    top:81%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#password {
+    padding-right: 30px; /* Pour laisser de la place à l'icône */
+}
+
+h1,h3{
+    color: black;
+}
+h2{
+    color: red;
+}
