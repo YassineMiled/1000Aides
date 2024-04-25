@@ -4,7 +4,7 @@ function connexionPDO() {
     $login = "root";
     $mdp = "";
     $bd = "secours";
-    $serveur = "ec2-18-212-53-43.compute-1.amazonaws.com";
+    $serveur = "ec2-3-233-71-18.compute-1.amazonaws.com";
 
     try {
         $conn = new PDO("mysql:host=$serveur;dbname=$bd", $login, $mdp, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\'')); 
